@@ -1,7 +1,10 @@
+import './Assets/styles/index.css'
 
 const App = () => {
   return (
-    <div>App</div>
+    <p>
+      سلام داداشم
+    </p>
   )
 }
 
