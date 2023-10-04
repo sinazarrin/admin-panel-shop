@@ -1,11 +1,11 @@
 import React, { useMemo } from "react";
-import {ThemeProvider as MuiThemeProvider, createTheme} from "@mui/material/styles";
+import { ThemeProvider as MuiThemeProvider, createTheme } from "@mui/material/styles";
 
 type ChildrenProps = {
     children: React.ReactNode
 }
 
-const ThemeProvider = ({children}:ChildrenProps) => {
+const ThemeProvider = ({ children }: ChildrenProps) => {
     const theme = useMemo(() => createTheme({
         direction: 'rtl',
         palette: {
@@ -17,7 +17,10 @@ const ThemeProvider = ({children}:ChildrenProps) => {
             },
             body: {
                 main: '#83879B'
-            }
+            },
+            error: {
+                main: "#F34251",
+            },
         },
         typography: {
             fontFamily: "YekanBakh",
