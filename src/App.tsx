@@ -1,10 +1,13 @@
 import './Assets/styles/index.css'
+import ThemeProvider from './Components/general/ThemeProvider'
 import DefaultLayout from './Layout/Default'
 
 const App = () => {
   return (
     <div>
-      <DefaultLayout />
+      <ThemeProvider>
+        <DefaultLayout />
+      </ThemeProvider>
     </div>
   )
 }
