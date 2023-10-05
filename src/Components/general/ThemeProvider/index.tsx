@@ -7,7 +7,6 @@ type ChildrenProps = {
 
 const ThemeProvider = ({ children }: ChildrenProps) => {
     const theme = useMemo(() => createTheme({
-        direction: 'rtl',
         palette: {
             primary: {
                 main: '#3661EB',

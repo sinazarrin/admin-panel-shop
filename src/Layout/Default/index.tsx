@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import Sidebar from './Sidebar'
+import { Toolbar, Typography } from '@mui/material'
+import Header from './Header'
 
 const DefaultLayout = () => {
     const [open, setOpen] = useState<boolean>(true)
@@ -7,10 +9,11 @@ const DefaultLayout = () => {
     const handleCloseSidebar = (): void => {
         setOpen(!open)
     }
-    
+
     return (
-        <div>
-            <Sidebar open={open} />
+        <div style={{ display: 'felx' }}>
+            <Header open={open}/>
+            <Sidebar open={open} handleCloseSidebar={handleCloseSidebar} />
         </div>
     )
 }

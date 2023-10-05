@@ -2,9 +2,9 @@ import { Drawer, styled } from "@mui/material";
 
 export const sidebarContainer = styled(Drawer)(({ theme }) => ({
     '.MuiToolbar-root': {
-        padding: '30px 30px 20px 0',
+        paddingRight: '30px',
         color: theme.palette.primary.main,
-        fontSize: '14px',
+        fontSize: '12px',
         '& img': {
             width: 25,
             marginLeft: 10,
@@ -17,6 +17,9 @@ export const sidebarContainer = styled(Drawer)(({ theme }) => ({
         color: '#bdbdbd',
         '& > ul > li': {
             paddingRight: 15,
+            '& span':{
+                fontSize: 14
+            }
         }
     },
     '& .MuiListItemButton-root': {

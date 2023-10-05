@@ -8,7 +8,7 @@ type sidebarProps = {
     open: boolean
 }
 
-const Sidebar = ({ open }: sidebarProps) => {
+const Sidebar = ({ open, handleCloseSidebar }: sidebarProps) => {
     return (
         <Styled.sidebarContainer anchor="right" open={open} variant="persistent">
             <Toolbar>
@@ -33,7 +33,7 @@ const Sidebar = ({ open }: sidebarProps) => {
                     })
                 }
                 <Divider />
-                <ListItem className='logout'>
+                <ListItem className='logout' onClick={handleCloseSidebar}>
                     <ListItemButton >
                         <ListItemIcon>
                             <LogoutIcon />
