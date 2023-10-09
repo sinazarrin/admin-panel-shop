@@ -9,13 +9,13 @@ const ThemeProvider = ({ children }: ChildrenProps) => {
     const theme = useMemo(() => createTheme({
         palette: {
             primary: {
-                main: '#3661EB',
+                main: '#304DFF',
             },
             secondary: {
                 main: '#1E1A22',
             },
             body: {
-                main: '#83879B'
+                main: '#f5f5f5'
             },
             error: {
                 main: "#F34251",

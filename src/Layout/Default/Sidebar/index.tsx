@@ -4,11 +4,12 @@ import sidebarItems from "./list";
 import * as Styled from './styled'
 import LogoutIcon from '@mui/icons-material/Logout';
 
-type sidebarProps = {
-    open: boolean
-}
+type SidebarProps = {
+    open: boolean;
+    handleCloseSidebar: () => void;
+};
 
-const Sidebar = ({ open, handleCloseSidebar }: sidebarProps) => {
+const Sidebar = ({ open, handleCloseSidebar }: SidebarProps) => {
     return (
         <Styled.sidebarContainer anchor="right" open={open} variant="persistent">
             <Toolbar>

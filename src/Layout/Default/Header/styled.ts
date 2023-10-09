@@ -1,10 +1,7 @@
 import { styled } from '@mui/material';
-import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
+import MuiAppBar from '@mui/material/AppBar';
 const drawerWidth = 240;
-
-interface AppBarProps extends MuiAppBarProps {
-    open?: boolean;
-}
+import { AppBarProps } from '.';
 
 export const AppBar = styled(MuiAppBar, {
     shouldForwardProp: (prop) => prop !== 'open',
@@ -21,6 +18,12 @@ export const AppBar = styled(MuiAppBar, {
         }),
         marginRight: drawerWidth,
     }),
+    "& .MuiToolbar-root":{
+        padding: '15px 35px',
+        justifyContent: 'space-between',
+    },
     background: '#fff',
     boxShadow: 'none',
+    color: theme.palette.secondary.main,
+    borderBottom: '1px solid rgba(0, 0, 0, 0.12)',
 }));

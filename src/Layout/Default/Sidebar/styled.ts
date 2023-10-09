@@ -2,7 +2,7 @@ import { Drawer, styled } from "@mui/material";
 
 export const sidebarContainer = styled(Drawer)(({ theme }) => ({
     '.MuiToolbar-root': {
-        paddingRight: '30px',
+        padding: '21px 35px',
         color: theme.palette.primary.main,
         fontSize: '12px',
         '& img': {
@@ -13,10 +13,13 @@ export const sidebarContainer = styled(Drawer)(({ theme }) => ({
     '& .MuiDrawer-paper': {
         width: 240,
         padding: 0,
-        background: theme.palette.secondary.main,
-        color: '#bdbdbd',
+        background: '#fff',
         '& > ul > li': {
             paddingRight: 15,
+            transition: 'all 0.5s',
+            '&:hover':{
+                transform: 'translateX(-10px)'
+            },
             '& span':{
                 fontSize: 14
             }
@@ -25,18 +28,14 @@ export const sidebarContainer = styled(Drawer)(({ theme }) => ({
     '& .MuiListItemButton-root': {
         textAlign: 'right',
         borderRadius: 12,
-        "&:hover": {
-            background: '#2d2d2d'
-        }
     },
     '& .MuiListItemIcon-root': {
         minWidth: 38,
         '& svg': {
-            color: '#bdbdbd',
+           
         },
     },
     '& .MuiDivider-root': {
-        borderColor: '#353535'
     },
     '& .logout ': {
         color: '#d13946',
