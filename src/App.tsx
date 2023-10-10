@@ -1,12 +1,15 @@
+import { BrowserRouter } from 'react-router-dom'
 import './Assets/styles/index.css'
 import ThemeProvider from './Components/general/ThemeProvider'
-import DefaultLayout from './Layout/Default'
+import Routes from './routes'
 
 const App = () => {
   return (
     <div>
       <ThemeProvider>
-        <DefaultLayout />
+        <BrowserRouter>
+          <Routes />
+        </BrowserRouter>
       </ThemeProvider>
     </div>
   )
